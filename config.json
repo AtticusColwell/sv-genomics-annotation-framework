@@ -1,0 +1,41 @@
+{
+    "input_alignments": "data/sample_alignments.json",
+    "gene_annotations": "data/genes.bed",
+    "repeat_annotations": "data/repeats.bed",
+    "population_frequencies": "data/population_freqs.json",
+    "output_dir": "results",
+    "min_support": 3,
+    "min_length": 50,
+    "frequency_threshold": 0.01,
+    "quality_threshold": 0.8,
+    "linkage_threshold": 0.8,
+    "max_distance": 100000,
+    "reference_genome": "GRCh38",
+    "sample_metadata": {
+      "sample_id": "SAMPLE_001",
+      "population": "EUR",
+      "sequencing_platform": "PacBio",
+      "coverage": "30x"
+    },
+    "filtering_parameters": {
+      "min_mapq": 20,
+      "min_sv_length": 50,
+      "max_sv_length": 1000000,
+      "min_flanking_sequence": 20,
+      "exclude_centromeres": true,
+      "exclude_telomeres": true,
+      "exclude_heterochromatin": true
+    },
+    "annotation_databases": {
+      "clinvar": "data/clinvar.vcf",
+      "dgv": "data/dgv.bed",
+      "gnomad": "data/gnomad_sv.vcf",
+      "regulatory_elements": "data/regulatory.bed"
+    },
+    "output_formats": [
+      "vcf",
+      "tsv",
+      "json",
+      "html_report"
+    ]
+  }
